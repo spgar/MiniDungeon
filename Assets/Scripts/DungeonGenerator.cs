@@ -172,7 +172,7 @@ public class DungeonGenerator : MonoBehaviour
 
                     if (MaterialOverrideStairsUp != null && i == stairsUpLocation.x && j == stairsUpLocation.z)
                     {
-                        for (int childIndex = 0; childIndex < createBlock.GetChildCount(); ++childIndex)
+                        for (int childIndex = 0; childIndex < createBlock.childCount; ++childIndex)
                         {
                             Transform child = createBlock.GetChild(childIndex);
                             child.renderer.material = MaterialOverrideStairsUp;
@@ -180,7 +180,7 @@ public class DungeonGenerator : MonoBehaviour
                     }
                     else if (MaterialOverrideStairsDown != null && i == stairsDownLocation.x && j == stairsDownLocation.z)
                     {
-                        for (int childIndex = 0; childIndex < createBlock.GetChildCount(); ++childIndex)
+                        for (int childIndex = 0; childIndex < createBlock.childCount; ++childIndex)
                         {
                             Transform child = createBlock.GetChild(childIndex);
                             child.renderer.material = MaterialOverrideStairsDown;
