@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
+// Home base is the hub for all adventures in this game.
+
 [AddComponentMenu("Scripts/SPGMetaStates/HomeBaseMetaState")]
 public class HomeBaseMetaState : MonoBehaviour
 {

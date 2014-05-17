@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
+// Main Menu
+
 [AddComponentMenu("Scripts/SPGMetaStates/MainMenuMetaState")]
 public class MainMenuMetaState : MonoBehaviour
 {   

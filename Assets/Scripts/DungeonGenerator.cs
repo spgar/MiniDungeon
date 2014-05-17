@@ -1,8 +1,12 @@
 using UnityEngine;
 using System.Collections;
 
+// DungeonGenerator is responsible for generating the random dungeon.
+// This class is way too complicated and needs to be broken down.
+
 public class DungeonGenerator : MonoBehaviour
 {
+	// Enumerates each building block type that we'll use to build the Dungeon.
     private enum BuildingBlockType
     {
         None,
@@ -24,6 +28,7 @@ public class DungeonGenerator : MonoBehaviour
         Sx
     }
 
+	// Stairs can be placed at a random location in the Dungeon or forced to the edges.
     public enum StairsPlacementType
     {
         Random,

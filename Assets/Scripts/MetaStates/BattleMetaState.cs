@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
+// Responsible for handling the simple battle system vs the scary frog.
+
 [AddComponentMenu("Scripts/SPGMetaStates/BattleMetaState")]
 public class BattleMetaState : MonoBehaviour
 {
@@ -23,7 +25,7 @@ public class BattleMetaState : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.X))
         {
             Hero.AddXP(10);
-            Hero.TakeDamage(Random.Range(0, 3));
+            Hero.TakeDamage(Random.Range(1, 3));
             MetaStateManager.SetNewMetaState(MetaState.Dungeon);
         }
 	}

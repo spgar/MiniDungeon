@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
+// Show a little bit of story in between floors of the Dungeon.
+
 [AddComponentMenu("Scripts/SPGMetaStates/StoryMetaState")]
 public class StoryMetaState : MonoBehaviour
 {

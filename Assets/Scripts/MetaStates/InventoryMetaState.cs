@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
+// Simple inventory screen. Unlimited healing potions, must be nice.
+
 [AddComponentMenu("Scripts/SPGMetaStates/InventoryMetaState")]
 public class InventoryMetaState : MonoBehaviour
 {

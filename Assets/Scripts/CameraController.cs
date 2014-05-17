@@ -15,6 +15,7 @@ public class CameraController : MonoBehaviour
 	
 	void Update()
     {
+		// Support zooming in and out to view the entire maze at once.
         if (Input.GetKeyUp(KeyCode.Z))
         {
             heroCameraZoomedIn = !heroCameraZoomedIn;

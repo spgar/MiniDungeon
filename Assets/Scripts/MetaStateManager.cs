@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+// Handles simple switching between different metastates of this simple game.
 public enum MetaState
 {
     None,

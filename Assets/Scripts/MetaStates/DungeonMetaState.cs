@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 
+// This is the main metastate. Handles navigation through the maze.
+
 [AddComponentMenu("Scripts/SPGMetaStates/DungeonMetaState")]
 public class DungeonMetaState : MonoBehaviour
 {
@@ -23,13 +25,11 @@ public class DungeonMetaState : MonoBehaviour
         {
             MetaStateManager.SetNewMetaState(MetaState.HomeBase);
         }
-
-        if (Input.GetKeyUp(KeyCode.I))
+        else if (Input.GetKeyUp(KeyCode.I))
         {
             MetaStateManager.SetNewMetaState(MetaState.Inventory);
         }
-
-        if (Input.GetKeyUp(KeyCode.Space) && !GoToNextFloorWhenExitIsTouched && DungeonGenerator.IsHeroOnStairsDown())
+        else if (Input.GetKeyUp(KeyCode.Space) && !GoToNextFloorWhenExitIsTouched && DungeonGenerator.IsHeroOnStairsDown())
         {
             MetaStateManager.SetNewMetaState(MetaState.Story);
         }
@@ -40,6 +40,7 @@ public class DungeonMetaState : MonoBehaviour
 
     void HandleCheatInput()
     {
+		// Don't tell anyone this secret key or they'll be able to cheat at the game.
         if (Input.GetKeyUp(KeyCode.Tab))
         {
             DungeonGenerator.GoToNextLevel();
@@ -55,17 +56,17 @@ public class DungeonMetaState : MonoBehaviour
             DungeonGenerator.MoveHero(Direction.North);
             moveSuccess = true;
         }
-        if (Input.GetKeyUp(KeyCode.A))
+        else if (Input.GetKeyUp(KeyCode.A))
         {
             DungeonGenerator.MoveHero(Direction.West);
             moveSuccess = true;
         }
-        if (Input.GetKeyUp(KeyCode.S))
+        else if (Input.GetKeyUp(KeyCode.S))
         {
             DungeonGenerator.MoveHero(Direction.South);
             moveSuccess = true;
         }
-        if (Input.GetKeyUp(KeyCode.D))
+        else if (Input.GetKeyUp(KeyCode.D))
         {
             DungeonGenerator.MoveHero(Direction.East);
             moveSuccess = true;
@@ -77,6 +78,7 @@ public class DungeonMetaState : MonoBehaviour
             return;
         }
 
+		// Random chance to get in a battle as the Hero navigates around the Dungeon.
         if (moveSuccess && Random.Range(0, 10) < 1)
         {
             MetaStateManager.SetNewMetaState(MetaState.Battle);
@@ -90,6 +92,7 @@ public class DungeonMetaState : MonoBehaviour
             return;
         }
 
+		// Display some information on how to play the game.
         GUI.Box(new Rect(25, 25, 150, 25), "Dungeon Floor: " + DungeonGenerator.DungeonFloorNumber);
         GUI.Label(new Rect(25, 55, 250, 25), "WASD = move");        
         GUI.Label(new Rect(25, 75, 250, 25), "Z = zoom in/out");

@@ -31,6 +31,7 @@ public class Hero : MonoBehaviour
 
     public void CheckForLevelUp()
     {
+		// I guess this 'game' only needs three levels.
         if (heroLevel == 1 && heroXP >= 100)
         {
             heroLevel = 2;
@@ -39,8 +40,7 @@ public class Hero : MonoBehaviour
             heroCurrentHP = heroMaxHP;
             heroCurrentMP = heroMaxMP;
         }
-
-        if (heroLevel == 2 && heroXP >= 300)
+        else if (heroLevel == 2 && heroXP >= 300)
         {
             heroLevel = 3;
             heroMaxHP = 35;
