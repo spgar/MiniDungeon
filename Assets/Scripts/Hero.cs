@@ -14,7 +14,7 @@ public class Hero : MonoBehaviour
 
 	void Start ()
 	{
-	    heroName = "Superfly";
+	    heroName = "Superfly";	// Named after Superfly Johnson, sidekick in Daikatana
 	    heroLevel = 1;
 	    heroXP = 0;
 	    heroCurrentHP = 10;
@@ -31,7 +31,7 @@ public class Hero : MonoBehaviour
 
     public void CheckForLevelUp()
     {
-		// I guess this 'game' only needs three levels.
+		// I guess this 'game' only needs three levels. Give some extra HP and MP on level up.
         if (heroLevel == 1 && heroXP >= 100)
         {
             heroLevel = 2;
@@ -64,6 +64,7 @@ public class Hero : MonoBehaviour
         }
     }
 
+	// Displays the Heros' stats. HP, MP, etc.
     void OnGUI()
     {
         if (MetaStateManager.GetCurrentMetaState() != MetaState.Dungeon 
