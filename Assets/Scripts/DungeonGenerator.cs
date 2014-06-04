@@ -6,7 +6,9 @@ using System.Collections;
 
 public class DungeonGenerator : MonoBehaviour
 {
-	// Enumerates each building block type that we'll use to build the Dungeon.
+    // Enumerates each building block type that we'll use to build the Dungeon.
+    // WNES means there are entrances/exits from/to west, north, east, and south.
+    // ES means there are entrances/exits from/to east and south. 
     private enum BuildingBlockType
     {
         None,
@@ -28,7 +30,7 @@ public class DungeonGenerator : MonoBehaviour
         Sx
     }
 
-	// Stairs can be placed at a random location in the Dungeon or forced to the edges.
+    // Stairs can be placed at a random location in the Dungeon or forced to the edges.
     public enum StairsPlacementType
     {
         Random,
