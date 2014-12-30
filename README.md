@@ -5,7 +5,7 @@ MiniDungeon is a simple Unity3D project that generates a procedural randomized d
 
 This is a small project that I originally put together as part of a 48 hour game development challenge. I never finished the game, and it's not the cleanest code - but there was some interest by others in using the random dungeon generator as the basis for their own project, so here it is. This project includes a very, very simple game framework.
 
-Last tested with Unity 4.3.2f1.
+Last tested with Unity 4.6.1f1.
 
 ## Example:
 
