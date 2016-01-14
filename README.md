@@ -14,10 +14,3 @@ View a simple example [in the Unity Webplayer here](http://stevegargolinski.com/
 ## How to Use:
 
 For more information you can [check out my blog post here](http://www.stevegargolinski.com/minidungeon-a-free-random-dungeon-jump-start-for-unity/), which includes a rundown of everything included in this project.
-
-## Contact:
-
-Steve Gargolinski  
-steve.gargolinski@gmail.com  
-[@sgargolinski](http://twitter.com/sgargolinski)  
-[http://www.stevegargolinski.com](http://www.stevegargolinski.com)
